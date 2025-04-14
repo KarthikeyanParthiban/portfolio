@@ -1,4 +1,4 @@
-/* General Styles */
+  /* General Styles */
 body {
   font-family: 'Roboto', sans-serif; /* Unified font family */
   margin: 0;
@@ -83,7 +83,7 @@ body {
   transition: all 0.3s ease;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   .nav-links {
     display: none;
     flex-direction: column;
@@ -91,11 +91,11 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
     background: #000;
-    padding: 20px;
     transform: translateX(-100%);
     transition: transform 0.3s ease;
+    height: auto;
+    padding: 20px; /* Adjust padding for better visibility */
   }
 
   .nav-links.active {
@@ -112,6 +112,10 @@ body {
 
   .menu-toggle {
     display: flex;
+  }
+
+  h1 {
+    font-size: 2rem;
   }
 }
 
@@ -131,10 +135,12 @@ body {
 
 .hero h1 {
   margin-bottom: 15px;
+  font-size: clamp(1.5rem, 5vw, 3rem); /* Dynamically scales between 1.5rem and 3rem */
 }
 
 .hero p {
   margin-bottom: 15px;
+  font-size: clamp(14px, 2.5vw, 18px); /* Dynamically scales between 14px and 18px */
 }
 
 .hero-content h1 {
@@ -181,6 +187,10 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
   overflow: hidden;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr; /* Stack project cards vertically on smaller screens */
+  }
 }
 
 /* Project Card */
@@ -195,6 +205,10 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  @media (max-width: 768px) {
+    padding: 15px; /* Reduce padding for smaller screens */
+  }
 }
 
 .project-card:hover {
@@ -238,6 +252,11 @@ button {
   transition: all 0.3s ease;
   cursor: pointer;
   outline: none;
+
+  @media (max-width: 768px) {
+    padding: 1.2em 2em; /* Reduce padding for smaller screens */
+    font-size: 10px; /* Reduce font size for smaller screens */
+  }
 }
 
 button:hover {
@@ -284,6 +303,12 @@ footer .social-links a:hover {
   justify-content: center;
   gap: 40px;
   margin-top: 20px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
 }
 
 .social-links a {
@@ -293,11 +318,19 @@ footer .social-links a:hover {
   transition: color 0.3s ease;
   display: flex;
   align-items: center;
+
+  @media (max-width: 768px) {
+    font-size: 16px; /* Reduce font size for smaller screens */
+  }
 }
 
 .social-links a i {
   margin-right: 5px;
   font-size: 24px;
+
+  @media (max-width: 768px) {
+    font-size: 20px; /* Reduce icon size for smaller screens */
+  }
 }
 
 .social-links a:hover {
@@ -309,7 +342,7 @@ footer .social-links a:hover {
 @media (max-width: 480px) {
   .hero {
     height: auto;
-    padding: 20px;
+    padding: 20px; /* Adjust padding for smaller screens */
   }
 
   .nav-links {
@@ -321,6 +354,19 @@ footer .social-links a:hover {
     flex-direction: column;
     gap: 10px;
     align-items: flex-start;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr; /* Stack project cards vertically on very small screens */
+  }
+
+  .project-card {
+    padding: 15px; /* Further reduce padding for very small screens */
+  }
+
+  button {
+    padding: 1.2em 2em; /* Further reduce padding for very small screens */
+    font-size: 10px; /* Further reduce font size for very small screens */
   }
 }
 
@@ -341,6 +387,10 @@ footer .social-links a:hover {
   box-shadow: none !important;
   margin-top: auto;
   text-align: center;
+
+  @media (max-width: 768px) {
+    font-size: 12px; /* Reduce font size for smaller screens */
+  }
 }
 
 .project-button:focus,
@@ -376,10 +426,13 @@ footer .social-links a:hover {
   color: #ffffff;
   position: relative;
   overflow: hidden;
-  margin-top: 200px;
-  margin-bottom : 20px;
-  margin: 0%;
+  margin-top: 20px;
+  margin-bottom: 20px;
   width: 600px;
+
+  @media (max-width: 768px) {
+    width: 100%; /* Ensure full width on smaller screens */
+  }
 }
 
 .animated-text::after {
