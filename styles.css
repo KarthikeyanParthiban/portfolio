@@ -83,7 +83,7 @@ body {
   transition: all 0.3s ease;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 480px) {
   .nav-links {
     display: none;
     flex-direction: column;
@@ -306,7 +306,7 @@ footer .social-links a:hover {
 }
 
 /* Responsive Adjustments */
-@media (max-width: 768px) {
+@media (max-width: 480px) {
   .hero {
     height: auto;
     padding: 20px;
