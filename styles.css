@@ -150,16 +150,16 @@ body {
 
 .glow-text {
   color: #ffffff;
-  text-shadow: 0 0 1px #ffffff;
-  animation: breathingGlow 1.5s infinite alternate;
+  text-shadow: 0 0 0.5px #ffffff;
+  animation: breathingGlow 2s infinite alternate;
 }
 
 @keyframes breathingGlow {
   0% {
-    text-shadow: 0 0 1px #ffffff;
+    text-shadow: 0 0 0.5px #ffffff;
   }
   100% {
-    text-shadow: 0 0 5px #ffffff;
+    text-shadow: 0 0 3px #ffffff;
   }
 }
 
